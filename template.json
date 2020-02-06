@@ -83,9 +83,7 @@
             "osType": "Linux"
           }
         ],
-        "servicePrincipalProfile": {
-          "clientId": "cde92a37-436b-4b58-b8d6-86732618aa4d"
-        },
+        
         "addonProfiles": {
           "httpApplicationRouting": {
             "enabled": false
