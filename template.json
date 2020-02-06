@@ -13,6 +13,10 @@
     "PIP-AddressesId": {
       "defaultValue": "/subscriptions/7321c489-306b-48c4-b5e4-c10bc715c438/resourceGroups/MC_RG-TBLX_KB-TBLX_westeurope/providers/Microsoft.Network/publicIPAddresses/21182314-8569-488a-a956-bf39308d342f",
       "type": "String"
+    },
+    "virtualNetworks_Net_TBLX_name": {
+      "defaultValue": "Net-TBLX",
+      "type": "String"
     }
   },
   "variables": {},
