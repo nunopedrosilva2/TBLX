@@ -17,6 +17,9 @@
     "virtualNetworks_Net_TBLX_name": {
       "defaultValue": "Net-TBLX",
       "type": "String"
+    },
+    "SpnId": {
+      "type": "String" 
     }
   },
   "variables": {},
@@ -83,7 +86,9 @@
             "osType": "Linux"
           }
         ],
-        
+        "servicePrincipalProfile": {
+          "clientId": "[parameters('SpnId')]"
+        },
         "addonProfiles": {
           "httpApplicationRouting": {
             "enabled": false
