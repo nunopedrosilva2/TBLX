@@ -109,7 +109,7 @@
               "name": "workernode",
               "targetInstanceCount": 4,
               "hardwareProfile": {
-                "vmSize": "Standard_D3_v2"
+                "vmSize": "Standard_B4ms"
               },
               "dataDisksGroups": [
                 {
