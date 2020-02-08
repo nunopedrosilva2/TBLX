@@ -2,31 +2,31 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "clusterName": {
+    "KafkaclusterName": {
       "type": "string",
       "metadata": {
         "description": "The name of the Kafka cluster to create. This must be a unique name."
       }
     },
-    "clusterLoginUserName": {
+    "KafkaUser": {
       "type": "string",
       "metadata": {
         "description": "These credentials can be used to submit jobs to the cluster and to log into cluster dashboards."
       }
     },
-    "clusterLoginPassword": {
+    "KafkaPassword": {
       "type": "securestring",
       "metadata": {
         "description": "The password must be at least 10 characters in length and must contain at least one digit, one non-alphanumeric character, and one upper or lower case letter."
       }
     },
-    "sshUserName": {
+    "KafkaSshUserName": {
       "type": "string",
       "metadata": {
         "description": "These credentials can be used to remotely access the cluster."
       }
     },
-    "sshPassword": {
+    "KafkaSshPassword": {
       "type": "securestring",
       "metadata": {
         "description": "The password must be at least 10 characters in length and must contain at least one digit, one non-alphanumeric character, and one upper or lower case letter."
@@ -59,7 +59,7 @@
       "properties": {}
     },
     {
-      "name": "[parameters('clusterName')]",
+      "name": "[parameters('KafkaclusterName')]",
       "type": "Microsoft.HDInsight/clusters",
       "location": "[parameters('location')]",
       "apiVersion": "2015-03-01-preview",
@@ -75,8 +75,8 @@
           "configurations": {
             "gateway": {
               "restAuthCredential.isEnabled": true,
-              "restAuthCredential.username": "[parameters('clusterLoginUserName')]",
-              "restAuthCredential.password": "[parameters('clusterLoginPassword')]"
+              "restAuthCredential.username": "[parameters('KafkaUser')]",
+              "restAuthCredential.password": "[parameters('KafkaPassword')]"
             }
           }
         },
@@ -85,7 +85,7 @@
             {
               "name": "[replace(replace(concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('defaultStorageAccount').name), '2017-10-01').primaryEndpoints.blob),'https:',''),'/','')]",
               "isDefault": true,
-              "container": "[parameters('clusterName')]",
+              "container": "[parameters('KafkaclusterName')]",
               "key": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('defaultStorageAccount').name), '2017-10-01').keys[0].value]"
             }
           ]
@@ -100,8 +100,8 @@
               },
               "osProfile": {
                 "linuxOperatingSystemProfile": {
-                  "username": "[parameters('sshUserName')]",
-                  "password": "[parameters('sshPassword')]"
+                  "username": "[parameters('KafkaSshUserName')]",
+                  "password": "[parameters('KafkaSshPassword')]"
                 }
               }
             },
@@ -118,8 +118,8 @@
               ],
               "osProfile": {
                 "linuxOperatingSystemProfile": {
-                  "username": "[parameters('sshUserName')]",
-                  "password": "[parameters('sshPassword')]"
+                  "username": "[parameters('KafkaSshUserName')]",
+                  "password": "[parameters('KafkaSshPassword')]"
                 }
               }
             },
@@ -131,8 +131,8 @@
               },
               "osProfile": {
                 "linuxOperatingSystemProfile": {
-                  "username": "[parameters('sshUserName')]",
-                  "password": "[parameters('sshPassword')]"
+                  "username": "[parameters('KafkaSshUserName')]",
+                  "password": "[parameters('KafkaSshPassword')]"
                 }
               }
             }
@@ -144,7 +144,7 @@
   "outputs": {
     "cluster": {
       "type": "object",
-      "value": "[reference(resourceId('Microsoft.HDInsight/clusters',parameters('clusterName')))]"
+      "value": "[reference(resourceId('Microsoft.HDInsight/clusters',parameters('KafkaclusterName')))]"
     }
   }
 }

@@ -2,19 +2,19 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "clusterName": {
+    "KafkaclusterName": {
       "value": "GEN-UNIQUE-8"
     },
-    "clusterLoginUserName": {
+    "KafkaUser": {
       "value": "GEN-UNIQUE"
     },
-    "clusterLoginPassword": {
+    "KafkaPassword": {
       "value": "GEN-PASSWORD"
     },
-    "sshUserName": {
+    "KafkaSshUserName": {
       "value": "GEN-UNIQUE"
     },
-    "sshPassword": {
+    "KafkaSshPassword": {
       "value": "GEN-PASSWORD"
     }
   }
