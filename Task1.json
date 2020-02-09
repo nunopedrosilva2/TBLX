@@ -67,7 +67,8 @@
     },
     "servicePrincipalClientSecret": {
       "metadata": {
-        "description": "The Service Principal Client Secret."
+        "description": "The Service Principal Client Secret.",
+        "defaultValue": "fkgluahgnoiervwbw gsgfgfdsg eegsag"
       },
       "type": "securestring"
     },
