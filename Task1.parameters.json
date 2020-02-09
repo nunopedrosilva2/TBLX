@@ -2,23 +2,17 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "clusterName": {
-      "value": "GEN-UNIQUE"
+    "PrefixDNS": {
+      "value": "gfdsgsgg"
     },
-    "dnsPrefix": {
-      "value": "GEN-UNIQUE"
+    "ClientId": {
+      "value": "17d96437-d757-443b-9e3b-e0247a06eb3c"
     },
-    "linuxAdminUsername": {
-      "value": "GEN-UNIQUE"
+    "ClientObject": {
+      "value": "dd1d3348-6958-47cd-aa34-1cce3dfab212"
     },
-    "sshRSAPublicKey": {
-      "value": "GEN-SSH-PUB-KEY"
-    },
-    "servicePrincipalClientId": {
-      "value": "GEN-AZUREAD-APPID"
-    },
-    "servicePrincipalClientSecret": {
-      "value": "GEN-UNIQUE"
+    "ClientSecret": {
+      "value": "c79e3e21-20e9-4062-a5b2-2ab3390324d7"
     }
   }
 }
