@@ -34,7 +34,7 @@
             "count": 2,
             "vmSize": "Standard_DS2_v2",
             "osDiskSizeGB": 100,
-            "vnetSubnetID": "[concat(parameters('VNetID'), '/subnets/default')]",
+            "vnetSubnetID": "[concat(variables('VNetID'), '/subnets/default')]",
             "maxPods": 30,
             "type": "VirtualMachineScaleSets",
             "orchestratorVersion": "1.14.8",
