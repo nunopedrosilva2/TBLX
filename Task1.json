@@ -100,7 +100,7 @@
       ],
       "properties": {
         "kubernetesVersion": "[variables('kubernetesversion')]",
-        "PrefixDNS": "[parameters('PrefixDNS')]",
+        "PrefixDNS": "dnsnametest",
         "addonProfiles": {
           "httpApplicationRouting": {
             "enabled": true
