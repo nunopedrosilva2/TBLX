@@ -6,9 +6,6 @@
     "ClusterName": {
       "value": null
     },
-    "VNetID": {
-      "value": null
-    },
     "PIP-AddressesId": {
       "value": null
     }
