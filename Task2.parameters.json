@@ -2,20 +2,14 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "KafkaclusterName": {
-      "value": "GEN-UNIQUE-8"
+    "adminUsername": {
+      "value": "tblxadmin"
     },
-    "KafkaUser": {
-      "value": "GEN-UNIQUE"
+    "adminPasswordOrKey": {
+      "value": "1P@ssw0rdTBLX*2020"
     },
-    "KafkaPassword": {
-      "value": "GEN-PASSWORD"
-    },
-    "KafkaSshUserName": {
-      "value": "GEN-UNIQUE"
-    },
-    "KafkaSshPassword": {
-      "value": "GEN-PASSWORD"
+    "dnsLabelPrefix": {
+      "value": "vmkafkatblx"
     }
   }
 }
