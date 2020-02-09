@@ -13,6 +13,7 @@
     },
     "ClientSecret": {
       "value": "c79e3e21-20e9-4062-a5b2-2ab3390324d7"
-    }
+    },
+    "LinuxAdmin": { "value": "tblxadmin" }
   }
 }

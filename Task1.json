@@ -25,6 +25,12 @@
         "description": "Secret of the Service Principal"
       },
       "type": "securestring"
+    },
+    "LinuxAdmin": {
+      "metadata": {
+        "description": "Secret of the Service Principal"
+      },
+      "type": "securestring"
     }
   },
   "variables": {
