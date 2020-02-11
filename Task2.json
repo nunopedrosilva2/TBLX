@@ -28,6 +28,7 @@
     },
     "adminPasswordOrKey": {
       "type": "securestring",
+      "defaultValue" :  "1qaZ2wsX*2020",
       "metadata": {
         "description": "SSH Key or password for the Virtual Machine. SSH key is recommended."
       }
@@ -96,7 +97,7 @@
     "subnetAddressPrefix": "10.1.0.0/24",
     "addressPrefix": "10.1.0.0/16",
     "linuxConfiguration": {
-      "disablePasswordAuthentication": true,
+      "disablePasswordAuthentication": false,
       "ssh": {
         "publicKeys": [
           {
